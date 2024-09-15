@@ -6,19 +6,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class ResultadoActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityResultadoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityResultadoBinding.inflate(layoutInflater)
         setContentView(binding.main)
 
-        binding.buttonBuscar.setOnClickListener {
-            var intent = Intent(this, ResultadoActivity::class.java)
-            startActivity(intent)
+        binding.buttonVoltar.setOnClickListener {
+
+            startActivity(Intent(this, MainActivity::class.java))
 
         }
     }
