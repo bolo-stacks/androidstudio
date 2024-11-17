@@ -12,6 +12,7 @@
         android:layout_width="240dp"
         android:layout_height="80dp"
         android:layout_centerInParent="true"
+        android:background="F0F000">
 
         <TextView
             android:id="@+id/text_pal"
@@ -21,8 +22,7 @@
             android:textSize="22sp"
             android:gravity="center"
             android:background="#00FF00"
-            android:layout_centerVertical="true"
-            />
+            android:layout_centerVertical="true" />
 
         <TextView
             android:id="@+id/text_int"
@@ -34,8 +34,34 @@
             android:background="#FF0000"
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/text_pal"
-            android:layout_marginStart="60dp"
-            />
+            android:layout_marginStart="60dp" />
+    
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="x"
+            android:textSize="18sp" />
+    
+        <TextView
+            android:id="@+id/text_placar_pal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="6"
+            android:textSize="22sp"
+            android:layout_toEndOf="@+id/text_pal"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:id="@+id/text_placar_int"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1"
+            android:textSize="22sp"
+            android:layout_toEndOf="@+id/text_int"
+            android:layout_marginEnd="20dp" />
 
     </RelativeLayout>
 
