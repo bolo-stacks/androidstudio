@@ -27,16 +27,16 @@ class MainActivity : AppCompatActivity() {
             playing = true
         }
 
-        binding.imgBaitaca.setOnClickListener {
+        binding.imgGaucho.setOnClickListener {
             if (playing) mediaPlayer.stop()
-            mediaPlayer = MediaPlayer.create(applicationContext, R.raw.baitaca_musica)
+            mediaPlayer = MediaPlayer.create(applicationContext, R.raw.gaucho_musica)
             mediaPlayer.start()
             playing = true
         }
 
-        binding.imgBaitaca.setOnClickListener {
+        binding.imgMano.setOnClickListener {
             if (playing) mediaPlayer.stop()
-            mediaPlayer = MediaPlayer.create(applicationContext, R.raw.baitaca_musica)
+            mediaPlayer = MediaPlayer.create(applicationContext, R.raw.mano_musica)
             mediaPlayer.start()
             playing = true
         }
