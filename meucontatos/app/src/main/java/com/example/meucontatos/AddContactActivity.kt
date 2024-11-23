@@ -1,4 +1,4 @@
-package com.example.contactsapp
+package com.example.meucontatos
 
 import android.content.Context
 import android.os.Bundle

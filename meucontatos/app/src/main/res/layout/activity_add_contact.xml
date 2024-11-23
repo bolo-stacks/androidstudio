@@ -8,14 +8,14 @@
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Nome"
         android:padding="8dp" />
 
     <EditText
         android:id="@+id/etPhone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Telefone"
         android:padding="8dp"
         android:inputType="phone" />

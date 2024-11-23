@@ -1,4 +1,4 @@
-package com.example.contactsapp
+package com.example.meucontatos
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
