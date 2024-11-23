@@ -1,43 +1,54 @@
-package com.example.meucontatos2
-
-import android.content.Intent
-import android.content.SharedPreferences
-import android.os.Bundle
-import android.widget.EditText
-import androidx.appcompat.app.AppCompatActivity
-
 class AddContactActivity : AppCompatActivity() {
 
-    private lateinit var editNome: EditText
-    private lateinit var editTelefone: EditText
-    private lateinit var editEmail: EditText
-    private lateinit var editEndereco: EditText
+    private lateinit var editTextNome: EditText
+    private lateinit var editTextTelefone: EditText
+    private lateinit var editTextEmail: EditText
+    private lateinit var editTextEndereco: EditText
+    private lateinit var buttonSalvar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_contact)
 
-        editNome = findViewById(R.id.editNome)
-        editTelefone = findViewById(R.id.editTelefone)
-        editEmail = findViewById(R.id.editEmail)
-        editEndereco = findViewById(R.id.editEndereco)
+        // Inicializando os campos de entrada
+        editTextNome = findViewById(R.id.editTextNome)
+        editTextTelefone = findViewById(R.id.editTextTelefone)
+        editTextEmail = findViewById(R.id.editTextEmail)
+        editTextEndereco = findViewById(R.id.editTextEndereco)
+        buttonSalvar = findViewById(R.id.buttonSalvar)
+
+        // Configurando o clique do botão para salvar o contato
+        buttonSalvar.setOnClickListener {
+            salvarContato()
+        }
     }
 
-    fun salvarContato() {
-        val nome = editNome.text.toString()
-        val telefone = editTelefone.text.toString()
-        val email = editEmail.text.toString()
-        val endereco = editEndereco.text.toString()
+    private fun salvarContato() {
+        val nome = editTextNome.text.toString()
+        val telefone = editTextTelefone.text.toString()
+        val email = editTextEmail.text.toString()
+        val endereco = editTextEndereco.text.toString()
 
-        val sharedPreferences: SharedPreferences = getSharedPreferences("MeuContatos", MODE_PRIVATE)
-        val editor: SharedPreferences.Editor = sharedPreferences.edit()
-        editor.putString("contato_nome", nome)
-        editor.putString("contato_telefone", telefone)
-        editor.putString("contato_email", email)
-        editor.putString("contato_endereco", endereco)
-        editor.apply()
+        if (nome.isNotEmpty() && telefone.isNotEmpty()) {
+            // Salvar contato no SharedPreferences
+            val sharedPreferences = getSharedPreferences("contacts", MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
 
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+            // Usando um identificador único para salvar múltiplos contatos
+            val contatoId = System.currentTimeMillis().toString() // Usando timestamp como ID único
+
+            // Salvar os dados no SharedPreferences
+            editor.putString("$contatoId_nome", nome)
+            editor.putString("$contatoId_telefone", telefone)
+            editor.putString("$contatoId_email", email)
+            editor.putString("$contatoId_endereco", endereco)
+            editor.apply()
+
+            // Redirecionar para a tela de listagem
+            Toast.makeText(this, "Contato salvo com sucesso!", Toast.LENGTH_SHORT).show()
+            finish() // Voltar para a tela anterior
+        } else {
+            Toast.makeText(this, "Por favor, preencha todos os campos obrigatórios.", Toast.LENGTH_SHORT).show()
+        }
     }
 }

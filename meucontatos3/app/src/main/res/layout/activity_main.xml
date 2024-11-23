@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/listarContatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listar Contatos"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/adicionarContato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Contato"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/editarContato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Contato"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/apagarContatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apagar Todos os Contatos"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/exportarContatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exportar Contatos"
+        android:padding="16dp"
+        android:textSize="18sp" />
+</LinearLayout>

@@ -1,43 +1,37 @@
-package com.example.meucontatos2
-
-import android.content.Intent
-import android.content.SharedPreferences
-import android.os.Bundle
-import android.widget.ListView
-import androidx.appcompat.app.AppCompatActivity
-
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var listView: ListView
-    private var contatos: ArrayList<Contato> = ArrayList()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        listView = findViewById(R.id.listView)
-        carregarContatos()
+        // Abrir tela de listar contatos
+        findViewById<TextView>(R.id.listContacts).setOnClickListener {
+            startActivity(Intent(this, ListContactsActivity::class.java))
+        }
 
-        val contatoAdapter = ContatoAdapter(this, contatos)
-        listView.adapter = contatoAdapter
+        // Abrir tela de adicionar contato
+        findViewById<TextView>(R.id.addContact).setOnClickListener {
+            startActivity(Intent(this, AddEditContactActivity::class.java))
+        }
 
-        listView.setOnItemClickListener { _, _, position, _ ->
-            val contato = contatos[position]
-            val intent = Intent(this, ContactDetailsActivity::class.java).apply {
-                putExtra("contato", contato)
-            }
-            startActivity(intent)
+        // Abrir tela de editar contato (se necessário)
+        findViewById<TextView>(R.id.editContact).setOnClickListener {
+            startActivity(Intent(this, EditContactActivity::class.java))
+        }
+
+        // Apagar todos os contatos
+        findViewById<TextView>(R.id.clearContacts).setOnClickListener {
+            clearAllContacts()
+        }
+
+        // Exportar contatos
+        findViewById<TextView>(R.id.exportContacts).setOnClickListener {
+            startActivity(Intent(this, ExportContactsActivity::class.java))
         }
     }
 
-    private fun carregarContatos() {
-        val sharedPreferences: SharedPreferences = getSharedPreferences("MeuContatos", MODE_PRIVATE)
-        val nome = sharedPreferences.getString("contato_nome", "N/A")
-        val telefone = sharedPreferences.getString("contato_telefone", "N/A")
-        val email = sharedPreferences.getString("contato_email", "N/A")
-        val endereco = sharedPreferences.getString("contato_endereco", "N/A")
-
-        val contato = Contato(nome ?: "N/A", telefone ?: "N/A", email ?: "N/A", endereco ?: "N/A")
-        contatos.add(contato)
+    // Função para apagar todos os contatos
+    private fun clearAllContacts() {
+        val sharedPrefs = getSharedPreferences("Contacts", MODE_PRIVATE)
+        sharedPrefs.edit().clear().apply()
     }
 }
