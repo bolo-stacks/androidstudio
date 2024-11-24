@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical|center_horizontal">
+
+    <!-- EditText para inserir o nome -->
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o nome" />
+
+    <!-- EditText para inserir o telefone -->
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o telefone"
+        android:inputType="phone"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botão para salvar o nome e telefone -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView para exibir a lista de contatos -->
+    <TextView
+        android:id="@+id/textViewNamesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nenhum contato adicionado"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botão para exportar a lista de contatos -->
+    <Button
+        android:id="@+id/buttonExport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exportar Contatos"
+        android:layout_marginTop="16dp" />
+
+    <!-- Espaço flexível para empurrar o botão para baixo -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Botão "Voltar" centralizado na parte inferior -->
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

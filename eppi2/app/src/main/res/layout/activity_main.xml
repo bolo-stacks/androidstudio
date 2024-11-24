@@ -1,0 +1,58 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Título da tela -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEUS CONTATOS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Botão para consultar -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Consultar" />
+
+    <!-- Botão para modificar -->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modificar"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botão para excluir -->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botão para exportar -->
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exportar"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botão para alternar entre modo claro e escuro -->
+    <Button
+        android:id="@+id/buttonToggleTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alternar Modo Escuro"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

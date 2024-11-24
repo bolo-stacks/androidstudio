@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Campo para inserir valor em reais (usando View e EditText) -->
+    <View
+        android:id="@+id/viewValorReal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Campo para inserir o valor em reais"
+        android:clickable="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/etValorReal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_valor_reais"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+    </View>
+
+    <!-- Exibição do resultado da conversão -->
+    <View
+        android:id="@+id/viewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:clickable="false"
+        android:focusable="false">
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultado_placeholder"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center" />
+    </View>
+
+    <!-- Botão de cálculo estilizado como View, com um TextView dentro -->
+    <View
+        android:id="@+id/viewCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/botao_calcular_euro">
+
+        <TextView
+            android:id="@+id/tvCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calcular"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:textColor="@android:color/holo_blue_dark" />
+    </View>
+</LinearLayout>

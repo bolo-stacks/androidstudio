@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">calculadora</string>
+    <string name="resultado_dolar">Resultado: %.2f dólares</string>
+    <string name="valor_invalido">Insira um valor válido</string>
+    <string name="resultado_euro">Resultado: %.2f euros</string>
+    <string name="resultado_ien">Resultado: %.2f ienes</string>
+    <string name="resultado_libra">Resultado: %.2f libras</string>
+
+    <string name="hint_valor_reais">Insira o valor em reais</string>
+    <string name="resultado_placeholder">Resultado aparecerá aqui</string>
+    <string name="calcular">Calcular</string>
+
+    <string name="botao_calcular_euro">Botão para calcular conversão de reais para euros</string>
+
+    <string name="botao_calcular_dolar">Botão para calcular conversão de reais para euros</string>
+
+    <string name="botao_calcular_ien">Botão para calcular conversão de reais para euros</string>
+
+    <string name="botao_calcular_libra">Botão para calcular conversão de reais para euros</string>
+
+
+
+</resources>

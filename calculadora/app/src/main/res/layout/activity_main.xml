@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <View
+        android:id="@+id/viewDolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Converter Reais para Dólares"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp" />
+
+    <View
+        android:id="@+id/viewIen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Converter Reais para Ienes"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp" />
+
+    <View
+        android:id="@+id/viewEuro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Converter Reais para Euros"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp" />
+
+    <View
+        android:id="@+id/viewLibra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Converter Reais para Libras"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp" />
+</LinearLayout>

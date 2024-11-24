@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Campo para inserir valor em reais -->
+    <EditText
+        android:id="@+id/etValorReal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_valor_reais"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Exibição do resultado da conversão -->
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resultado_placeholder"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center" />
+
+    <!-- Botão de cálculo estilizado como TextView -->
+    <TextView
+        android:id="@+id/tvCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/botao_calcular_libra" />
+</LinearLayout>
